@@ -10,7 +10,7 @@ import time
 
 logger = logging.getLogger()
 
-run = str(time.time())
+run_id = str(time.time())
 
 try:
     PAGES_DIR = str(sys.argv[1])
@@ -19,6 +19,7 @@ except:
 logger.info(' || Using pages inside directory ' + PAGES_DIR)
 
 IMAGES_DIR = 'images'
+DATADIR = 'records'
 
 ###########################
 
@@ -44,4 +45,4 @@ for page in pages:
     main_df=main_df.append(df)
 
 print(main_df.describe())
-df.to_csv("artist_dataset_{}.csv".format(run), sep="|")
+main_df.to_csv("{}/artist_dataset_{}.csv".format(DATADIR, run_id), sep="|")

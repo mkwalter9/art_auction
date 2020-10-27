@@ -1,5 +1,5 @@
 
 
-images/*
-pages/*
+data_collection/images/*
+data_collection/pages/*
 */*.html
