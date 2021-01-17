@@ -2,4 +2,5 @@
 
 data_collection/images/*
 data_collection/pages/*
+eda/cleaned_data/*
 */*.html
